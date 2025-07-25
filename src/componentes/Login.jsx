@@ -1,10 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { Navbar, Nav, Button, Container, Form, Tab, Tabs } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
-
 import crimsonToneLogo from '../assets/CrimsonTone.jpg';
 import prsBackground from '../assets/PRS.webp';
-
 import './Login.css';
 
 function Login() {
@@ -23,8 +21,7 @@ function Login() {
 
   return (
     <>
-      <header className="hero-section" id="guitarras-home" style={headerStyle}>
-        <Navbar expand="lg" className="navbar">
+    <Navbar expand="lg" className="navbar">
           <Container fluid>
             <Navbar.Brand as={Link} to="/">
               <img src={crimsonToneLogo} alt="CrimsonTone Logo" className="logo-img" />
@@ -45,6 +42,7 @@ function Login() {
           </Container>
         </Navbar>
 
+      <header className="hero-section" id="guitarras-home" style={headerStyle}>
         <div className="hero-content">
           <h1>ACCESO</h1>
           <p>Inicia sesión o regístrate para acceder a tu cuenta.</p>
@@ -116,8 +114,8 @@ function Login() {
           </div>
           <div className="contact-info">
             <h4>Contacto</h4>
-            <p>Correo electrónico: <a href="mailto:crimson@tone.com">crimson@tone.com</a></p>
-            <p>Contacto: + 593 987 269 974</p>
+            <p><i className="fas fa-envelope"></i> Correo electrónico: <a href="mailto:crimson@tone.com">crimson@tone.com</a></p>
+            <p><i className="fas fa-phone"></i> Contacto: + 593 987 269 974</p>
           </div>
           <div className="copyright">
             <p>© <span id="current-year"></span> Crimson Tone. Derechos Reservados.</p>

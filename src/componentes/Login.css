@@ -1,128 +1,312 @@
-/* Las variables CSS (como --light-bg, --text-dark, etc.) se heredan de estilos.css */
+html, body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    background-color: var(--light-bg, #f4f4f4);
+    color: var(--text-dark, #333);
+}
+
+*, *::before, *::after {
+    box-sizing: border-box !important;
+}
+
+.navbar {
+    background-color: #333;
+    padding: 1rem 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.navbar .navbar-brand .logo-img {
+    height: 50px;
+    width: auto;
+}
+
+.navbar .nav-link {
+    color: #fff !important;
+    font-weight: 500;
+    margin-right: 15px;
+    transition: color 0.3s ease;
+}
+
+.navbar .nav-link:hover {
+    color: var(--primary-light, #e74c3c) !important;
+}
+
+.hero-section {
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    text-align: center;
+    padding: 100px 20px 50px;
+    position: relative;
+    margin-top: 70px;
+}
+
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 1;
+}
+
+.hero-section .hero-content {
+    position: relative;
+    z-index: 2;
+}
+
+.hero-section h1 {
+    font-size: 3.5rem;
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+.hero-section .highlight-tone {
+    color: var(--primary-color, #e74c3c);
+}
+
+.hero-section p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    color: #ccc;
+}
 
 .auth-section {
-    background-color: var(--light-bg);
-    color: var(--text-dark);
-    padding: var(--spacing-xl) 0;
+    padding: var(--spacing-xl, 40px) 0;
     text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: calc(100vh - 70px - 200px);
 }
 
 .auth-container {
-    max-width: 500px;
+    max-width: 400px !important;
     background-color: #FFFFFF;
-    border-radius: var(--border-radius);
+    border-radius: var(--border-radius, 8px);
     box-shadow: 0 8px 25px rgba(0,0,0,0.1);
-    padding: var(--spacing-large);
-    margin-top: var(--spacing-large); /* Espacio superior para separar del header */
-    margin-bottom: var(--spacing-large); /* Espacio inferior para separar del footer */
-    margin-left: auto; /* Centrar el contenedor */
-    margin-right: auto; /* Centrar el contenedor */
+    padding: 10px !important;
+    width: 90% !important;
+    margin: 0 auto !important;
+    overflow: hidden;
 }
 
 .auth-tabs {
-    display: flex;
     justify-content: center;
-    margin-bottom: var(--spacing-medium);
-    border-bottom: 2px solid #E0E0E0;
+    margin-bottom: var(--spacing-medium, 30px);
+    border-bottom: 2px solid var(--border-color, #E0E0E0);
 }
 
-.tab-button {
+.nav-tabs .nav-item .nav-link {
     background-color: transparent;
     border: none;
-    padding: var(--spacing-small) var(--spacing-medium);
+    padding: var(--spacing-small, 10px) var(--spacing-medium, 20px);
     font-size: 1.2em;
     font-weight: 700;
     cursor: pointer;
-    color: var(--text-dark);
+    color: var(--text-dark, #333);
     border-bottom: 2px solid transparent;
-    transition: all var(--transition-speed);
+    transition: all var(--transition-speed, 0.3s) ease;
 }
 
-.tab-button:hover {
-    color: var(--primary-light);
+.nav-tabs .nav-item .nav-link:hover {
+    color: var(--primary-light, #e74c3c);
+    border-bottom-color: var(--primary-light, #e74c3c);
 }
 
-.tab-button.active {
-    color: var(--primary-color);
-    border-bottom-color: var(--primary-color);
+.nav-tabs .nav-item .nav-link.active {
+    color: var(--primary-color, #e74c3c);
+    border-bottom-color: var(--primary-color, #e74c3c);
+    background-color: transparent;
+    border-top-color: transparent;
+    border-left-color: transparent;
+    border-right-color: transparent;
 }
 
 .auth-form {
-    text-align: left;
+    text-align: center;
 }
 
 .auth-form h2 {
-    color: var(--primary-color);
+    color: var(--primary-color, #e74c3c);
     text-align: center;
-    margin-bottom: var(--spacing-large);
+    margin-bottom: var(--spacing-large, 30px);
 }
 
 .form-group {
-    margin-bottom: var(--spacing-medium);
+    margin-bottom: var(--spacing-small, 15px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100% !important;
 }
 
 .form-group label {
     display: block;
-    margin-bottom: var(--spacing-xs);
+    margin-bottom: var(--spacing-xs, 5px);
     font-weight: 500;
-    color: var(--secondary-color);
+    color: var(--secondary-color, #555);
+    font-size: 0.9em !important;
+    max-width: 350px !important;
+    width: 100% !important;
+    text-align: left;
 }
 
 .form-group input[type="email"],
 .form-group input[type="password"],
 .form-group input[type="text"] {
-    width: 100%;
-    padding: var(--spacing-small);
-    border: 1px solid #ddd;
-    border-radius: var(--border-radius);
-    font-size: 1em;
-    font-family: var(--font-body);
-    color: var(--text-dark);
-    background-color: #fcfcfc;
+    width: 100% !important;
+    max-width: 350px !important;
+    padding: var(--spacing-xs, 8px) !important;
+    border: 1px solid #ddd !important;
+    border-radius: var(--border-radius, 4px) !important;
+    font-size: 0.9em !important;
+    font-family: var(--font-body, 'Poppins', sans-serif) !important;
+    color: var(--text-dark, #333) !important;
+    background-color: #fcfcfc !important;
 }
 
-/* El botón .btn ya está definido en estilos.css, solo adaptamos su tamaño aquí */
 .auth-form .btn {
-    width: 100%;
-    font-size: 1.2em;
-    padding: var(--spacing-small);
-    margin-top: var(--spacing-small);
+    width: 100% !important;
+    max-width: 350px !important;
+    font-size: 1em !important;
+    padding: var(--spacing-small, 10px) !important;
+    margin-top: var(--spacing-medium, 15px) !important;
+    background-color: var(--primary-color, #e74c3c) !important;
+    color: var(--text-light, #fff) !important;
+    border: none !important;
+    border-radius: var(--border-radius, 5px) !important;
+    cursor: pointer !important;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease !important;
+    box-shadow: 0 4px 10px rgba(var(--primary-color-rgb, 231, 76, 60), 0.3) !important;
 }
 
-.auth-form.hidden {
-    display: none;
+.auth-form .btn:hover {
+    background-color: var(--primary-dark, #c0392b) !important;
+    box-shadow: 0 6px 15px rgba(var(--primary-color-rgb, 231, 76, 60), 0.4) !important;
+}
+
+.main-footer {
+    background-color: #222;
+    color: #fff;
+    padding: 40px 0;
+    text-align: center;
+    position: relative;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+}
+
+.main-footer .footer-content {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.main-footer h4 {
+    color: var(--primary-color, #e74c3c);
+    margin-bottom: 15px;
+    font-size: 1.2rem;
+}
+
+.main-footer ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.main-footer ul li {
+    margin-bottom: 10px;
+}
+
+.main-footer ul li a {
+    color: #ccc;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.main-footer ul li a:hover {
+    color: var(--primary-color, #e74c3c);
+}
+
+.main-footer .contact-info p {
+    margin-bottom: 5px;
+    color: #ccc;
+}
+
+.main-footer .contact-info a {
+    color: #ccc;
+    text-decoration: none;
+}
+
+.main-footer .contact-info a:hover {
+    color: var(--primary-color, #e74c3c);
+}
+
+.main-footer .copyright {
+    margin-top: 30px;
+    font-size: 0.9rem;
+    color: #aaa;
+    width: 100%;
 }
 
 @media (max-width: 768px) {
     .auth-container {
-        padding: var(--spacing-medium);
-        margin: var(--spacing-large) auto;
+        padding: 10px !important;
+        margin: var(--spacing-large, 20px) auto !important;
     }
     .auth-tabs {
         flex-direction: column;
-        gap: var(--spacing-xs);
+        gap: var(--spacing-xs, 5px);
         border-bottom: none;
     }
-    .tab-button {
+    .nav-tabs .nav-item .nav-link {
         border-bottom: 1px solid #eee;
-        border-radius: var(--border-radius);
+        border-radius: var(--border-radius, 4px);
         margin: 0;
         text-align: center;
+        padding: 10px 15px;
     }
-    .tab-button.active {
+    .nav-tabs .nav-item .nav-link.active {
         border-bottom: none;
-        background-color: var(--primary-color);
-        color: var(--text-light);
+        background-color: var(--primary-color, #e74c3c);
+        color: var(--text-light, #fff);
     }
-    .tab-button:hover {
-        background-color: var(--primary-light);
-        color: var(--text-light);
+    .nav-tabs .nav-item .nav-link:hover {
+        background-color: var(--primary-light, #c0392b);
+        color: var(--text-light, #fff);
     }
     .auth-form h2 {
         font-size: 2em;
-        margin-bottom: var(--spacing-medium);
+        margin-bottom: var(--spacing-medium, 20px);
     }
-    .form-group label, .form-group input {
-        font-size: 0.9em;
+    .form-group label,
+    .form-group input[type="email"],
+    .form-group input[type="password"],
+    .form-group input[type="text"],
+    .auth-form .btn {
+        max-width: 300px !important;
+    }
+    .main-footer .footer-content {
+        flex-direction: column;
+        align-items: center;
+    }
+    .main-footer .social-media,
+    .main-footer .contact-info {
+        margin-bottom: 20px;
     }
 }
