@@ -21,26 +21,26 @@ function Login() {
 
   return (
     <>
-    <Navbar expand="lg" className="navbar">
-          <Container fluid>
-            <Navbar.Brand as={Link} to="/">
-              <img src={crimsonToneLogo} alt="CrimsonTone Logo" className="logo-img" />
-            </Navbar.Brand>
-            <Navbar.Toggle aria-controls="main-nav-collapse" />
-            <Navbar.Collapse id="main-nav-collapse">
-              <Nav className="ms-auto main-nav-list">
-                <Nav.Link as={Link} to="/">Inicio</Nav.Link>
-                <Nav.Link as={Link} to="/guitarras">Guitarras</Nav.Link>
-                <Nav.Link as={Link} to="/#quienes-somos">¿Quiénes Somos?</Nav.Link>
-                <Nav.Link as={Link} to="/#cobertura">Cobertura</Nav.Link>
-                <Nav.Item>
-                  <Nav.Link as={Link} to="/login" className="btn-login active-link-style">Login</Nav.Link>
-                </Nav.Item>
-                <Nav.Link as={Link} to="/contacto">Contacto</Nav.Link>
-              </Nav>
-            </Navbar.Collapse>
-          </Container>
-        </Navbar>
+      <Navbar expand="lg" className="navbar">
+        <Container fluid>
+          <Navbar.Brand as={Link} to="/">
+            <img src={crimsonToneLogo} alt="CrimsonTone Logo" className="logo-img" />
+          </Navbar.Brand>
+          <Navbar.Toggle aria-controls="main-nav-collapse" />
+          <Navbar.Collapse id="main-nav-collapse">
+            <Nav className="ms-auto main-nav-list">
+              <Nav.Link as={Link} to="/">Inicio</Nav.Link>
+              <Nav.Link as={Link} to="/guitarras">Guitarras</Nav.Link>
+              <Nav.Link as={Link} to="/#quienes-somos">¿Quiénes Somos?</Nav.Link>
+              <Nav.Link as={Link} to="/#cobertura">Cobertura</Nav.Link>
+              <Nav.Item>
+                <Nav.Link as={Link} to="/login" className="btn-login active-link-style">Login</Nav.Link>
+              </Nav.Item>
+              <Nav.Link href="#contacto-footer">Contacto</Nav.Link>
+            </Nav>
+          </Navbar.Collapse>
+        </Container>
+      </Navbar>
 
       <header className="hero-section" id="guitarras-home" style={headerStyle}>
         <div className="hero-content">
