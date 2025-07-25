@@ -1,0 +1,369 @@
+#guitarras-home.hero-section {
+    background-image: url('../assets/PRS.webp');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #fff;
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    padding-top: 56px;
+    transition: background-image 0.5s ease-in-out;
+}
+
+#guitarras-home.hero-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 0;
+}
+
+#guitarras-home .hero-content {
+    position: relative;
+    z-index: 1;
+    padding: 0 20px;
+}
+
+#guitarras-home .hero-content h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+    letter-spacing: 1px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+#guitarras-home .hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    line-height: 1.5;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+}
+
+#guitarras-home .highlight-tone {
+    color: #ff4500;
+}
+
+#guitarras-home .btn {
+    background-color: #ff4500;
+    border-color: #ff4500;
+    color: #fff;
+    font-weight: 600;
+    padding: 12px 30px;
+    border-radius: 50px;
+    transition: background-color 0.3s ease, border-color 0.3s ease, transform 0.2s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+#guitarras-home .btn:hover {
+    background-color: #e03e00;
+    border-color: #e03e00;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+}
+
+.guitars-listing-section {
+    padding: 60px 0;
+    background-color: #f8f8f8;
+    text-align: center;
+}
+
+.guitars-listing-section h2 {
+    font-size: 2.8rem;
+    color: #333;
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+.guitars-listing-section p {
+    font-size: 1.1rem;
+    color: #666;
+    margin-bottom: 40px;
+}
+
+.guitar-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    justify-content: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.guitar-card {
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+.guitar-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+.guitar-card .image-container {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+    position: relative;
+    border-bottom: 1px solid #eee;
+    margin-bottom: 15px;
+}
+
+.guitar-card .image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.guitar-card:hover .image-container img {
+    transform: scale(1.05);
+}
+
+.guitar-card .favorite-icon-container {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.guitar-card .favorite-icon-container i {
+    color: #ccc;
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+}
+
+.guitar-card .favorite-icon-container.favorited i {
+    color: #e74c3c;
+}
+
+.guitar-card .favorite-icon-container:hover {
+    transform: scale(1.1);
+    background-color: #fff;
+}
+
+.guitar-card h3 {
+    font-size: 1.6rem;
+    color: #333;
+    margin-bottom: 10px;
+    padding: 0 15px;
+}
+
+.guitar-card .description {
+    font-size: 0.95rem;
+    color: #777;
+    margin-bottom: 15px;
+    height: 60px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    line-clamp: 3;
+    -webkit-box-orient: vertical;
+    padding: 0 15px;
+}
+
+.guitar-card .card-bottom-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 0 20px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+.guitar-card .rating {
+    color: #f39c12;
+    font-size: 1rem;
+    flex-grow: 1;
+    text-align: left;
+}
+
+.guitar-card .price {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #e74c3c;
+    flex-grow: 1;
+    text-align: right;
+}
+
+.guitar-card .add-to-cart {
+    background-color: #3498db;
+    color: #fff;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.guitar-card .add-to-cart:hover {
+    background-color: #2980b9;
+}
+
+.guitar-card .add-to-cart i {
+    font-size: 1rem;
+}
+
+.guitar-card .details-toggle {
+    width: 100%;
+    padding: 0 20px;
+    margin-top: 15px;
+}
+
+.guitar-card .view-details-btn {
+    background-color: #6c757d;
+    border-color: #6c757d;
+    color: #fff;
+    width: 100%;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+    margin-bottom: 15px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.guitar-card .view-details-btn:hover {
+    background-color: #5a6268;
+    border-color: #5a6268;
+}
+
+.guitar-card .guitar-specs {
+    background-color: #f0f0f0;
+    border-radius: 8px;
+    padding: 15px;
+    margin-top: 10px;
+    text-align: left;
+    width: 100%;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.guitar-card .guitar-specs h4 {
+    font-size: 1.1rem;
+    color: #333;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 5px;
+}
+
+.guitar-card .guitar-specs ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.guitar-card .guitar-specs ul li {
+    font-size: 0.9rem;
+    color: #555;
+    margin-bottom: 5px;
+    line-height: 1.4;
+}
+
+.guitar-card .guitar-specs ul li:last-child {
+    margin-bottom: 0;
+}
+
+@media (max-width: 992px) {
+    #guitarras-home .hero-content h1 {
+        font-size: 2.8rem;
+    }
+    #guitarras-home .hero-content p {
+        font-size: 1rem;
+    }
+    .guitar-grid {
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    }
+}
+
+@media (max-width: 768px) {
+    #guitarras-home.hero-section {
+        height: 50vh;
+    }
+    #guitarras-home .hero-content h1 {
+        font-size: 2.2rem;
+    }
+    #guitarras-home .hero-content p {
+        font-size: 0.9rem;
+    }
+    .guitars-listing-section {
+        padding: 40px 0;
+    }
+    .guitars-listing-section h2 {
+        font-size: 2.2rem;
+    }
+    .guitar-grid {
+        grid-template-columns: 1fr;
+        max-width: 350px;
+    }
+    .guitar-card .card-bottom-info {
+        flex-direction: column;
+        align-items: center;
+    }
+    .guitar-card .rating,
+    .guitar-card .price,
+    .guitar-card .add-to-cart {
+        text-align: center;
+        width: 100%;
+        margin-top: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    #guitarras-home.hero-section {
+        height: 40vh;
+    }
+    #guitarras-home .hero-content h1 {
+        font-size: 1.8rem;
+    }
+    #guitarras-home .hero-content p {
+        font-size: 0.8rem;
+    }
+    #guitarras-home .btn {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+    }
+    .guitars-listing-section h2 {
+        font-size: 1.8rem;
+    }
+    .guitar-card h3 {
+        font-size: 1.4rem;
+    }
+    .guitar-card .price {
+        font-size: 1.2rem;
+    }
+}

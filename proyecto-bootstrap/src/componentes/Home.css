@@ -1,0 +1,512 @@
+/* Navbar */
+.navbar-custom {
+    background-color: #212529 !important;
+    padding: 1rem 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.navbar-custom .navbar-brand .logo-img {
+    height: 40px;
+    filter: brightness(1.2);
+}
+
+.navbar-custom .nav-link {
+    color: #f8f9fa !important;
+    font-weight: 500;
+    margin: 0 10px;
+    transition: color 0.3s ease;
+}
+
+.navbar-custom .nav-link:hover {
+    color: #ff4500 !important;
+}
+
+.navbar-custom .btn-login {
+    background-color: #ff4500;
+    border-color: #ff4500;
+    color: #fff;
+    padding: 8px 20px;
+    border-radius: 5px;
+    font-weight: 600;
+    margin-left: 20px;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.navbar-custom .btn-login:hover {
+    background-color: #e03e00;
+    border-color: #e03e00;
+}
+
+.navbar-custom .navbar-toggler {
+    border-color: rgba(255, 255, 255, 0.1);
+}
+
+.navbar-custom .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 0.55%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+/* HERO SECTION (Página de Inicio) */
+.hero-section {
+    background-image: url('../assets/PRS.webp');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #fff;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    padding-top: 56px;
+    overflow: hidden;
+}
+
+.hero-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 0;
+}
+
+.hero-section .hero-content {
+    position: relative;
+    z-index: 1;
+    padding: 0 20px;
+}
+
+.hero-section .hero-content h1 {
+    font-size: 5rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+    letter-spacing: 3px;
+    text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.8);
+    color: #fff;
+}
+
+.hero-section .hero-content h1 .highlight-tone {
+    color: #ff4500;
+}
+
+.hero-section .hero-content p {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    line-height: 1.6;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    color: #f0f0f0;
+}
+
+.hero-section .btn-explore {
+    background-color: #e74c3c;
+    border-color: #e74c3c;
+    color: #fff;
+    font-weight: 600;
+    padding: 15px 40px;
+    border-radius: 50px;
+    transition: background-color 0.3s ease, border-color 0.3s ease, transform 0.2s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    font-size: 1.2rem;
+}
+
+.hero-section .btn-explore:hover {
+    background-color: #c0392b;
+    border-color: #c0392b;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+}
+
+/* SECCIÓN "¿QUIÉNES SOMOS?" */
+.about-us-section {
+    padding: 80px 0;
+    background-color: #fff;
+    text-align: center;
+}
+
+.about-us-section h2 {
+    font-size: 2.8rem;
+    color: #333;
+    margin-bottom: 15px;
+    font-weight: 700;
+    position: relative;
+    display: inline-block;
+}
+
+.about-us-section h2::after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 4px;
+    background-color: #e74c3c;
+    margin: 10px auto 0;
+    border-radius: 2px;
+}
+
+.about-us-section p {
+    font-size: 1.1rem;
+    color: #666;
+    margin-bottom: 40px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.6;
+}
+
+.about-us-section .mission-vision {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.about-us-section .mission,
+.about-us-section .vision,
+.about-us-section .suggestions {
+    background-color: #f0f0f0;
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.about-us-section .mission h3,
+.about-us-section .vision h3,
+.about-us-section .suggestions h3 {
+    font-size: 1.8rem;
+    color: #e74c3c;
+    margin-bottom: 15px;
+    position: relative;
+    padding-left: 35px;
+}
+
+.about-us-section .mission h3::before {
+    content: "\f02d";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    position: absolute;
+    left: 0;
+    color: #e74c3c;
+    font-size: 1.5rem;
+}
+.about-us-section .vision h3::before {
+    content: "\f06e";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    position: absolute;
+    left: 0;
+    color: #e74c3c;
+    font-size: 1.5rem;
+}
+.about-us-section .suggestions h3::before {
+    content: "\f06a";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    position: absolute;
+    left: 0;
+    color: #ffc107;
+    font-size: 1.5rem;
+}
+
+
+.about-us-section .mission p,
+.about-us-section .vision p,
+.about-us-section .suggestions p {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+.about-us-section .suggestions form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.about-us-section .suggestions textarea {
+    width: 100%;
+    min-height: 120px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-family: inherit;
+    resize: vertical;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.05);
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.about-us-section .suggestions textarea:focus {
+    border-color: #e74c3c;
+    outline: none;
+    box-shadow: 0 0 0 0.25rem rgba(231, 76, 60, 0.25);
+}
+
+.about-us-section .suggestions .btn {
+    background-color: #e74c3c;
+    border-color: #e74c3c;
+    color: #fff;
+    padding: 12px 25px;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, border-color 0.3s ease, transform 0.2s ease;
+    width: auto;
+    align-self: flex-end;
+}
+
+.about-us-section .suggestions .btn:hover {
+    background-color: #c0392b;
+    border-color: #c0392b;
+    transform: translateY(-2px);
+}
+/* SECCIÓN "COBERTURA" */
+.coverage-section {
+    padding: 80px 0;
+    background-color: #343a40;
+    color: #f8f9fa;
+    text-align: center;
+}
+
+.coverage-section h2 {
+    font-size: 2.8rem;
+    color: #e74c3c;
+    margin-bottom: 15px;
+    font-weight: 700;
+    position: relative;
+    display: inline-block;
+}
+
+.coverage-section h2::after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 4px;
+    background-color: #e74c3c;
+    margin: 10px auto 0;
+    border-radius: 2px;
+}
+
+.coverage-section p {
+    font-size: 1.1rem;
+    color: #adb5bd;
+    margin-bottom: 40px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.6;
+}
+
+.coverage-section .map-container {
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+    height: 450px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.coverage-section .map-container iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+
+/* Footer */
+.main-footer {
+    background-color: #212529;
+    color: #f8f9fa;
+    padding: 40px 0;
+    font-size: 0.95rem;
+}
+
+.main-footer .footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 30px;
+    text-align: left;
+}
+
+.main-footer h4 {
+    color: #e74c3c;
+    margin-bottom: 15px;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.main-footer ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.main-footer ul li {
+    margin-bottom: 10px;
+}
+
+.main-footer ul li a {
+    color: #adb5bd;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.main-footer ul li a:hover {
+    color: #fff;
+}
+
+.main-footer .contact-info p {
+    margin-bottom: 5px;
+    color: #adb5bd;
+}
+
+.main-footer .contact-info a {
+    color: #adb5bd;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.main-footer .contact-info a:hover {
+    color: #fff;
+}
+
+.main-footer .copyright p {
+    margin-top: 20px;
+    text-align: center;
+    width: 100%;
+    color: #adb5bd;
+}
+
+.main-footer .social-media i {
+    margin-right: 8px;
+    font-size: 1.1rem;
+    vertical-align: middle;
+}
+
+@media (max-width: 992px) {
+    .hero-section {
+        height: 70vh;
+    }
+    .hero-section .hero-content h1 {
+        font-size: 4rem;
+    }
+    .hero-section .hero-content p {
+        font-size: 1.3rem;
+    }
+    .about-us-section .mission-vision {
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    }
+    .coverage-section .map-container {
+        height: 400px;
+    }
+    .main-footer .footer-content {
+        justify-content: space-between;
+        padding: 0 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar-custom {
+        padding: 0.8rem 0;
+    }
+    .hero-section {
+        height: 60vh;
+        padding-top: 0;
+    }
+    .hero-section .hero-content h1 {
+        font-size: 3rem;
+        letter-spacing: 1px;
+    }
+    .hero-section .hero-content p {
+        font-size: 1.1rem;
+        margin-bottom: 15px;
+    }
+    .hero-section .btn-explore {
+        padding: 10px 25px;
+        font-size: 1rem;
+    }
+    .about-us-section {
+        padding: 50px 0;
+    }
+    .about-us-section h2 {
+        font-size: 2.2rem;
+    }
+    .about-us-section .mission-vision {
+        grid-template-columns: 1fr;
+        max-width: 400px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .coverage-section {
+        padding: 50px 0;
+    }
+    .coverage-section h2 {
+        font-size: 2.2rem;
+    }
+    .coverage-section .map-container {
+        height: 350px;
+    }
+    .main-footer .footer-content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .main-footer .copyright {
+        margin-top: 30px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-section {
+        height: 50vh;
+    }
+    .hero-section .hero-content h1 {
+        font-size: 2.2rem;
+    }
+    .hero-section .hero-content p {
+        font-size: 0.9rem;
+    }
+    .hero-section .btn-explore {
+        padding: 8px 20px;
+        font-size: 0.9rem;
+    }
+    .about-us-section h2 {
+        font-size: 1.8rem;
+    }
+    .about-us-section p {
+        font-size: 1rem;
+    }
+    .about-us-section .mission h3,
+    .about-us-section .vision h3,
+    .about-us-section .suggestions h3 {
+        font-size: 1.5rem;
+    }
+    .about-us-section .suggestions .btn {
+        font-size: 1rem;
+    }
+    .coverage-section h2 {
+        font-size: 1.8rem;
+    }
+    .coverage-section .map-container {
+        height: 280px;
+    }
+    .main-footer h4 {
+        font-size: 1.1rem;
+    }
+    .main-footer p, .main-footer ul li {
+        font-size: 0.85rem;
+    }
+}

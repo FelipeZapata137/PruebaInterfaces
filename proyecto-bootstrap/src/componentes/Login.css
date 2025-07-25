@@ -1,0 +1,128 @@
+/* Las variables CSS (como --light-bg, --text-dark, etc.) se heredan de estilos.css */
+
+.auth-section {
+    background-color: var(--light-bg);
+    color: var(--text-dark);
+    padding: var(--spacing-xl) 0;
+    text-align: center;
+}
+
+.auth-container {
+    max-width: 500px;
+    background-color: #FFFFFF;
+    border-radius: var(--border-radius);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+    padding: var(--spacing-large);
+    margin-top: var(--spacing-large); /* Espacio superior para separar del header */
+    margin-bottom: var(--spacing-large); /* Espacio inferior para separar del footer */
+    margin-left: auto; /* Centrar el contenedor */
+    margin-right: auto; /* Centrar el contenedor */
+}
+
+.auth-tabs {
+    display: flex;
+    justify-content: center;
+    margin-bottom: var(--spacing-medium);
+    border-bottom: 2px solid #E0E0E0;
+}
+
+.tab-button {
+    background-color: transparent;
+    border: none;
+    padding: var(--spacing-small) var(--spacing-medium);
+    font-size: 1.2em;
+    font-weight: 700;
+    cursor: pointer;
+    color: var(--text-dark);
+    border-bottom: 2px solid transparent;
+    transition: all var(--transition-speed);
+}
+
+.tab-button:hover {
+    color: var(--primary-light);
+}
+
+.tab-button.active {
+    color: var(--primary-color);
+    border-bottom-color: var(--primary-color);
+}
+
+.auth-form {
+    text-align: left;
+}
+
+.auth-form h2 {
+    color: var(--primary-color);
+    text-align: center;
+    margin-bottom: var(--spacing-large);
+}
+
+.form-group {
+    margin-bottom: var(--spacing-medium);
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: var(--spacing-xs);
+    font-weight: 500;
+    color: var(--secondary-color);
+}
+
+.form-group input[type="email"],
+.form-group input[type="password"],
+.form-group input[type="text"] {
+    width: 100%;
+    padding: var(--spacing-small);
+    border: 1px solid #ddd;
+    border-radius: var(--border-radius);
+    font-size: 1em;
+    font-family: var(--font-body);
+    color: var(--text-dark);
+    background-color: #fcfcfc;
+}
+
+/* El botón .btn ya está definido en estilos.css, solo adaptamos su tamaño aquí */
+.auth-form .btn {
+    width: 100%;
+    font-size: 1.2em;
+    padding: var(--spacing-small);
+    margin-top: var(--spacing-small);
+}
+
+.auth-form.hidden {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .auth-container {
+        padding: var(--spacing-medium);
+        margin: var(--spacing-large) auto;
+    }
+    .auth-tabs {
+        flex-direction: column;
+        gap: var(--spacing-xs);
+        border-bottom: none;
+    }
+    .tab-button {
+        border-bottom: 1px solid #eee;
+        border-radius: var(--border-radius);
+        margin: 0;
+        text-align: center;
+    }
+    .tab-button.active {
+        border-bottom: none;
+        background-color: var(--primary-color);
+        color: var(--text-light);
+    }
+    .tab-button:hover {
+        background-color: var(--primary-light);
+        color: var(--text-light);
+    }
+    .auth-form h2 {
+        font-size: 2em;
+        margin-bottom: var(--spacing-medium);
+    }
+    .form-group label, .form-group input {
+        font-size: 0.9em;
+    }
+}
